@@ -1,5 +1,5 @@
 {
-  "name": "Example App",
+  "name": "Assistant App",
   "description": "An example private app that contains a single card extension.",
   "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
   "public": false,
