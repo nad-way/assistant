@@ -15,7 +15,7 @@ exports.main = async (context = {}, sendResponse) => {
       text: "Congratulations! You just deployed your first **HubSpot UI extension**. This example CRM card uses the [ZenQuotes public API](https://zenquotes.io/) to display a daily quote. It also includes custom button actions using serverless functions.",
     },
   };
-  
+  /*
   const nextSteps = [
     {
       type: "divider",
@@ -65,10 +65,10 @@ exports.main = async (context = {}, sendResponse) => {
         },
       },
     ];
-
+*/
     sendResponse({
-      sections: [introMessage, ...quoteSections, ...nextSteps],
-    });
+      sections: [introMessage/*, ...quoteSections, ...nextSteps*/],
+    });/*
   } catch (error) {
     // "message" will create an error feedback banner when it catches an error
     sendResponse({
@@ -78,7 +78,7 @@ exports.main = async (context = {}, sendResponse) => {
       },
       sections: [introMessage],
     });
-  }
+  }*/
   
 /*
   const card_builder = [
