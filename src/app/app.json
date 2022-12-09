@@ -1,6 +1,6 @@
 {
-  "name": "assistant",
-  "description": "An example private app that contains a single card extension.",
+  "name": "Assistant app",
+  "description": "Une carte qui affiche l'assistant.e des personnes qui en ont.",
   "location": "crm.record.sidebar",
   "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
   "public": false,

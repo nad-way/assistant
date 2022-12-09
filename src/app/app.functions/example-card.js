@@ -4,7 +4,7 @@ const axios = require("axios");
 exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
-
+  /*
   const introMessage = {
     type: "alert",
     title: "Your first UI extension is ready!",
@@ -15,7 +15,7 @@ exports.main = async (context = {}, sendResponse) => {
       text: "Congratulations! You just deployed your first **HubSpot UI extension**. This example CRM card uses the [ZenQuotes public API](https://zenquotes.io/) to display a daily quote. It also includes custom button actions using serverless functions.",
     },
   };
-
+  
   const nextSteps = [
     {
       type: "divider",
@@ -31,7 +31,7 @@ exports.main = async (context = {}, sendResponse) => {
       text: "You can explore more [code samples](https://github.com/HubSpot/ui-extensions-examples) or UI components in the [CRM card builder](https://app.hubspot.com/l/extensible-ui/), or try code samples. If you get stuck, take look at your [build or deploy logs](https://app.hubspot.com/l/developer-projects/) or [serverless functions logs](https://app.hubspot.com/l/private-apps/).",
     },
   ];
-
+  
   try {
     const { data } = await axios.get("https://zenquotes.io/api/random");
 
@@ -79,4 +79,48 @@ exports.main = async (context = {}, sendResponse) => {
       sections: [introMessage],
     });
   }
-};
+  */
+
+  const card_builder = [
+    {
+      type: "descriptionList",
+      items: [
+        {
+          label: "Prénom NOM",
+          value: "prénom nom"
+        },
+        {
+          label: "Numéro de téléphone",
+          value: " num "
+        },
+        {
+          label: "Email",
+          value: "mail"
+        },
+        {
+          label: "garder pour le lien",
+          value: {
+            type: "text",
+            format: "markdown",
+            text: "[Learn more about the description list component](https://app-eu1.hubspot.com/l/docs/doc/platform/create-custom-crm-cards-with-projects#components)"
+          }
+        }
+      ]
+    }
+  ];
+
+  sendResponse({
+    sections: [card_builder],
+  });
+ 
+}  /*
+catch (error) {
+  // "message" will create an error feedback banner when it catches an error
+  sendResponse({
+    message: {
+      type: "ERROR",
+      body: `Error: ${error.message}`,
+    },
+    sections: [introMessage],
+  });
+} */
