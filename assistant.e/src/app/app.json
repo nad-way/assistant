@@ -1,6 +1,7 @@
 {
   "name": "Assistant App",
   "description": "An example private app that contains a single card extension.",
+  "location": "crm.record.sidebar",
   "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
   "public": false,
   "extensions": {
@@ -11,5 +12,28 @@
         }
       ]
     }
-  }
+  },
+  "type": "descriptionList",
+    "items": [
+      {
+        "label": "Prénom NOM",
+        "value": "prénom nom"
+      },
+      {
+        "label": "Numéro de téléphone",
+        "value": " num "
+      },
+      {
+        "label": "Email",
+        "value": "mail"
+      },
+      {
+        "label": "garder pour le lien",
+        "value": {
+          "type": "text",
+          "format": "markdown",
+          "text": "[Learn more about the description list component](https://app-eu1.hubspot.com/l/docs/doc/platform/create-custom-crm-cards-with-projects#components)"
+        }
+      }
+    ]
 }
