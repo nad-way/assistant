@@ -1,5 +1,5 @@
 {
-  "name": "Assistant App",
+  "name": "assistant",
   "description": "An example private app that contains a single card extension.",
   "location": "crm.record.sidebar",
   "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
