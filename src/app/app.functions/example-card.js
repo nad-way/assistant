@@ -4,7 +4,7 @@ const axios = require("axios");
 exports.main = async (context = {}, sendResponse) => {
   // Store contact firstname, configured as propertiesToSend in crm-card.json
   const { firstname } = context.propertiesToSend;
-  /*
+  
   const introMessage = {
     type: "alert",
     title: "Your first UI extension is ready!",
@@ -79,8 +79,8 @@ exports.main = async (context = {}, sendResponse) => {
       sections: [introMessage],
     });
   }
-  */
-
+  
+/*
   const card_builder = [
     {
       type: "descriptionList",
@@ -113,7 +113,7 @@ exports.main = async (context = {}, sendResponse) => {
     sections: [card_builder],
   });
  
-}  /*
+}  
 catch (error) {
   // "message" will create an error feedback banner when it catches an error
   sendResponse({
@@ -122,5 +122,5 @@ catch (error) {
       body: `Error: ${error.message}`,
     },
     sections: [introMessage],
-  });
-} */
+  }); */
+} 
