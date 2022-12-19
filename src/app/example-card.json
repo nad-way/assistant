@@ -8,6 +8,7 @@
       "objectTypes": [
         {
           "type": "descriptionList",
+          "propertiesToSend": ["email"],
           "items": [
             {
               "label": "Component",
