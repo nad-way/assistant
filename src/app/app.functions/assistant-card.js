@@ -8,26 +8,44 @@ exports.main = async (context = {}, sendResponse) => {
   const {propertiesToSend: { email, firstname, lifecyclestage }} = context;
   try {
    sendResponse({
-    title: "This card retrieves key contact details.",
+    //title: "This card retrieves key contact details.",
     sections: [
-     {
-      "type": "descriptionList",
-      "direction": "row",
-      "items": [
-       {
-        "label": "Email",
-        "value": email
-       },
-       {
-        "label": "First name",
-        "value": firstname
-       },
-       {
-        "label": "Lifecycle stage",
-        "value": lifecyclestage
-       }
-      ]
-     }
+      {
+        "type": "descriptionList",
+        "items": [
+          {
+            "label": "Component",
+            "value": "Description list"
+          },
+          {
+            "label": "What's shown",
+            "value": "Pairs of labels and values"
+          },
+          {
+            "label": "Direction options",
+            "value": {
+              "type": "text",
+              "text": "Row or column"
+            }
+          },
+          {
+            "label": "Relevant doc",
+            "value": {
+              "type": "text",
+              "format": "markdown",
+              "text": "[Learn more about the description list component](https://app-eu1.hubspot.com/l/docs/doc/platform/create-custom-crm-cards-with-projects#components)"
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "text": "Click to trigger an action",
+        "onClick": {
+          "type": "SERVERLESS_ACTION_HOOK",
+          "serverlessFunction": "exampleFunction"
+        }
+      }
     ]
    });     
   } catch (error) {
