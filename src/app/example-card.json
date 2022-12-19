@@ -7,7 +7,7 @@
       "targetFunction": "crm-card",
       "objectTypes": [
         {
-          "type": "descriptionList",
+          "name": "Assistant",
           "propertiesToSend": ["email"]
 
         }
