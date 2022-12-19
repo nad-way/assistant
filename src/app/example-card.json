@@ -7,8 +7,40 @@
       "targetFunction": "crm-card",
       "objectTypes": [
         {
-          "name": "contacts",
-          "propertiesToSend": ["firstname"]
+          "type": "descriptionList",
+          "items": [
+            {
+              "label": "Component",
+              "value": "Description list"
+            },
+            {
+              "label": "What's shown",
+              "value": "Pairs of labels and values"
+            },
+            {
+              "label": "Direction options",
+              "value": {
+                "type": "text",
+                "text": "Row or column"
+              }
+            },
+            {
+              "label": "Relevant doc",
+              "value": {
+                "type": "text",
+                "format": "markdown",
+                "text": "[Learn more about the description list component](https://app-eu1.hubspot.com/l/docs/doc/platform/create-custom-crm-cards-with-projects#components)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "text": "Click to trigger an action",
+          "onClick": {
+            "type": "SERVERLESS_ACTION_HOOK",
+            "serverlessFunction": "exampleFunction"
+          }
         }
       ]
     }
