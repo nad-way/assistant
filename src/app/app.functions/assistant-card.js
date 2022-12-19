@@ -9,7 +9,21 @@ exports.main = async (context = {}, sendResponse) => {
   
   if (`${type_contact}` === `Client`) {
     if (`${nom_assistant_e}` !== ``) {
-      sendResponse({ sections: [`${nom_assistant_e}`], 
+      sendResponse({ sections: [
+        {
+          "type": "text",
+          "format": "markdown",
+          "text": "**Markdown**"
+        },
+        {
+          "type": "button",
+          "text": "Click me",
+          "onClick": {
+            "type": "SERVERLESS_ACTION_HOOK",
+             "serverlessFunction": "crm-card"
+          } 
+        },
+    ],
     });
     }
   };
