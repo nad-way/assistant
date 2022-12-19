@@ -9,7 +9,7 @@ exports.main = async (context = {}, sendResponse) => {
   
   if (`${type_contact}` === `Client`) {
     if (`${nom_assistant_e}` !== ``) {
-      sendResponse({ sections: [nom_assistant_e], 
+      sendResponse({ sections: [`${nom_assistant_e}`], 
     });
     }
   };
