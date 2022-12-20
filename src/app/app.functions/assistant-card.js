@@ -2,8 +2,36 @@
 
 // Include HubSpot node API client
 const hubspot = require('@hubspot/api-client');
-/*
+
 exports.main = async (context = {}, sendResponse) => {
+  const { firstname } = context.propertiesToSend;
+  try {
+  const introMessage = {
+    type: "alert",
+    title: "Your first UI extension is ready!",
+    variant: "success",
+    body: {
+      type: "text",
+      format: "markdown",
+      text: "Congratulations! ",
+    },
+  };
+  sendResponse({
+    sections: [introMessage],
+  });
+}
+catch (error) {
+  // "message" will create an error feedback banner when it catches an error
+  sendResponse({
+    message: {
+      type: "ERROR",
+      body: `Error: ${error.message}`,
+    },
+    sections: [introMessage],
+  });
+}
+}
+  /*
   // Store contact info, configured as propertiesToSend in crm-card.json
   const { hs_object_id, firstname, lastname, type_contact } = context.propertiesToSend;
   
@@ -21,7 +49,7 @@ exports.main = async (context = {}, sendResponse) => {
   };
   console.log(`${nom_assistant_e}`)
 };
-*/
+
 
 
 
@@ -73,6 +101,6 @@ exports.main = async (context = {}, sendResponse) => {
      console.error(error);
     }
    };
-
+*/
 
 
