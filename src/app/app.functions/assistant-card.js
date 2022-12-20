@@ -15,19 +15,11 @@ exports.main = async (context = {}, sendResponse) => {
           "format": "markdown",
           "text": "**Markdown**"
         },
-        {
-          "type": "button",
-          "text": "Click me",
-          "onClick": {
-            "type": "SERVERLESS_ACTION_HOOK",
-             "serverlessFunction": "crm-card"
-          } 
-        },
-    ],
+      ],
     });
     }
   };
-  console.log(`${type_contact}`, `${type_contact}` === `Client`)
+  console.log(`${nom_assistant_e}`)
 };
 
 

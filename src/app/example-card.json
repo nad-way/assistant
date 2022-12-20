@@ -7,8 +7,8 @@
       "targetFunction": "crm-card",
       "objectTypes": [
         {
-          "name": "Assistant",
-          "propertiesToSend": ["email"]
+          "name": "assist",
+          "propertiesToSend": ["hs_object_id", "nom_assistant_e"] 
 
         }
       ]
