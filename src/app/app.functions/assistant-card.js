@@ -2,7 +2,7 @@
 
 // Include HubSpot node API client
 const hubspot = require('@hubspot/api-client');
-
+/*
 // First des first 
 
 // For external API calls
