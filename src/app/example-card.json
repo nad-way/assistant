@@ -2,7 +2,7 @@
   "type": "crm-card",
   "data": {
     "title": "Assistant.e",
-    "location": "crm.record.tab",
+    "location": "crm.record.sidebar",
     "fetch": {
       "targetFunction": "crm-card",
       "objectTypes": [
